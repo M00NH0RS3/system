@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ usuarioOnline }}</title>
+    <link rel="stylesheet" href="../static/css/usuario.css" />
+  </head>
+
+  <body>
+    <div id="top">
+      <h1>{{ usuarioOnline }}</h1>
+      <ul class="menu">
+        <li>
+          <form action="/chat" method="post">
+            <button type="submit" id="btn_menu">CHAT</button>
+          </form>
+        </li>
+        <li>
+          <form action="/sair" method="post">
+            <button type="submit" id="btn_menu">SAIR</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div id="dashboard">
+      <div id="cadastro" class="area">
+        <h1 class="area">CADASTRO</h1>
+        <form action="/cliente">
+          <button type="submit" class="subarea">CLIENTE</button>
+        </form>
+        <form action="/fornecedor">
+          <button type="submit" class="subarea">FORNECEDOR</button>
+        </form>
+        <form action="produto">
+          <button type="submit" class="subarea">PRODUTO</button>
+        </form>
+        <form action="/servico">
+          <button type="submit" class="subarea">SERVIÇO</button>
+        </form>
+        <form action="/transporte">
+          <button type="submit" class="subarea">TRANSPORTADORA</button>
+        </form>
+      </div>
+      <div id="comercial" class="area">
+        <h1 class="area">COMERCIAL</h1>
+        <button type="submit" class="subarea">ORÇAMENTO</button>
+        <button type="submit" class="subarea">PEDIDO DE VENDA</button>
+      </div>
+      <div id="producao" class="area">
+        <h1 class="area">PRODUÇÃO</h1>
+        <button type="submit" class="subarea">ORDEM DE PRODUÇÃO</button>
+        <button type="submit" class="subarea">ORDEM DE SERVIÇO</button>
+        <button type="submit" class="subarea">REQUISIÇÃO DE MATERIAL</button>
+        <button type="submit" class="subarea">ORDEM DE PRODUÇÃO</button>
+      </div>
+      <div id="fiscal" class="area">
+        <h1 class="area">FISCAL</h1>
+        <button type="submit" class="subarea">EMISSÃO DE NOTA FISCAL</button>
+        <button type="submit" class="subarea">ENTRADA DE NOTA FISCAL</button>
+      </div>
+      <div id="compras" class="area">
+        <h1 class="area">COMPRAS</h1>
+        <button type="submit" class="subarea">COTAÇÃO</button>
+        <button type="submit" class="subarea">ESTOQUE</button>
+        <button type="submit" class="subarea">ORDEM DE COMPRA</button>
+      </div>
+      <div id="financeiro" class="area">
+        <h1 class="area">FINANCEIRO</h1>
+        <button type="submit" class="subarea">CONTAS A PAGAR</button>
+        <button type="submit" class="subarea">CONTAS A RECEBER</button>
+      </div>
+    </div>
+
+    <div id="form_fundo" style="text-align: center">
+      <h1>Download de Arquivos</h1>
+      <div id="form_frente">
+        {% if arquivos %}
+        <form action="/download" method="post">
+          <select name="arquivosParaDownload" id="arquivosParaDownload">
+            {% for documento in arquivos %}
+            <option value="{{documento}}">{{documento}}</option>
+            {% endfor %}</select
+          ><br /><br /><br />
+          <button type="submit">DOWNLOAD</button>
+        </form>
+        {% else %}
+        <h1>SEM ARQUIVO NO BANCO DE DADOS PARA DOWNLOADS</h1>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

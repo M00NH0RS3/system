@@ -1,0 +1,26 @@
+@app.route('/cadastrarUsuario', methods=['POST'])
+def cadastrarUsuario():
+
+    global logado
+
+    user = []
+    nome = request.form.get('nome')
+    senha = request.form.get('senha')
+    user = [
+        {
+            "nome": nome,
+            "senha": senha
+        }
+    ]
+
+    with open('usuarios.json') as usuariosTemp:
+        usuarios = json.load(usuariosTemp)
+
+            usuarioNovo = usuarios + user
+
+        with open('usuarios.json', 'w') as gravarTemp:
+            json.dump(usuarioNovo, gravarTemp, indent=4)
+        logado = True
+
+        flash(F'{nome} cadastrado!')
+        return redirect('/adm')

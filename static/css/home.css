@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+body{
+    background: url(https://i.ibb.co/4YVvdgp/background.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+div.flash_alerta{
+    background-color: rgba(230, 90, 72, 0.722);
+    font-size: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+
+}
+
+div#form_fundo{
+    background-color: rgb(0, 0, 0);;
+    color: rgb(136, 205, 205);
+    backdrop-filter: blur(10px);
+    opacity: .9;
+    margin: 10% 25% 25%;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px 6px rgb(136, 205, 205);
+    align-items: center;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    font-size: 25px;
+}
+
+div#form_frente{
+    background-color: rgb(205, 233, 233);
+    color: rgb(34, 54, 54);
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 20px;
+
+}
+
+label{
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+input{
+    background-color: rgb(209, 209, 209);
+    color: #000;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+input:focus{
+    background-color: rgba(185, 249, 249, 0.549);
+    color: black;
+}
+
+button{
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: rgb(27, 38, 38);
+    color: rgb(253, 253, 253);
+    padding: 12px;
+}
+
+button:hover{
+    background-color: rgb(253, 253, 253);
+    color: rgb(27, 38, 38);
+    border-color: 27, 38, 38;
+    font-size: 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px;
+}
