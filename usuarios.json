@@ -1,10 +1,30 @@
 [
     {
-        "nome": "Mathues Ihau",
-        "senha": "26032003"
+        "nome": "Matheus Maciel",
+        "senha": "260303"
     },
     {
-        "nome": "Sandinho",
+        "nome": "Alessandro Dias",
+        "senha": "123456"
+    },
+    {
+        "nome": "Gabriel Luz",
+        "senha": "070503"
+    },
+    {
+        "nome": "Sebastian Fonseca",
+        "senha": "123456"
+    },
+    {
+        "nome": "Neyder Campos",
+        "senha": "123456"
+    },
+    {
+        "nome": "Izabelle Fonseca",
+        "senha": "123456"
+    },
+    {
+        "nome": "Fernanda Ramos",
         "senha": "123456"
     }
 ]
