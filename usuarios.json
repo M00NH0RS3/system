@@ -26,5 +26,9 @@
     {
         "nome": "Fernanda Ramos",
         "senha": "123456"
+    },
+    {
+        "nome": "Eduardo",
+        "senha": "123"
     }
 ]

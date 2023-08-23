@@ -22,7 +22,7 @@
     <div id="top-bar">
       <h1 id="nomeChat" style="text-align: center">System Chat</h1>
       <form action="/menu" method="post">
-        <button type="submit" id="btn_menu">Menu</button>
+        <button type="submit" id="btn_menu">MENU</button>
       </form>
     </div>
 
@@ -43,7 +43,7 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        var socket = io("192.168.0.58:5000");
+        var socket = io("127.0.0.1:5000");
         socket.on("connect", function () {
           console.log("conectou");
         });

@@ -174,6 +174,6 @@ def sair():
     return redirect('/')
 
 if __name__ in '__main__':
-    # app.run(debug=1)
-    app.run(debug=0)
+    app.run(debug=1)
+    # app.run(debug=0)
     # socketio.run(app, host='192.168.0.58')
